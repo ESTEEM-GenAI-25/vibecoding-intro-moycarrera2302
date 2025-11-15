@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moisés Alejandro Carrera Alcacio</title>
+    <title>Moisés Alejandro Carrera Alcacio | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -24,7 +24,19 @@
             background-color: #6366F1;
             border-radius: 9999px;
         }
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react-dom/client": "https://esm.sh/react-dom/client",
+        "@google/genai": "https://esm.sh/@google/genai?pin=v63",
+        "react": "https://esm.sh/react?pin=v63"
+      }
+    }
+    </script>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -35,8 +47,8 @@
             <nav class="mt-4 sm:mt-0">
                 <a href="#about" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300 mx-2 sm:mx-4 font-semibold">About</a>
                 <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300 mx-2 sm:mx-4 font-semibold">Projects</a>
+                <a href="#interactive-demo" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300 mx-2 sm:mx-4 font-semibold">Interactive Demo</a>
                 <a href="#education" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300 mx-2 sm:mx-4 font-semibold">Education</a>
-                <a href="#skills" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300 mx-2 sm:mx-4 font-semibold">Skills</a>
             </nav>
         </div>
     </header>
@@ -69,39 +81,45 @@
             <h3 class="section-title text-3xl font-bold text-gray-900 mb-8">Projects & Experience</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 <!-- Project 1: Tycho.Al -->
-                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg transition-transform duration-300 hover:scale-[1.02]">
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg transition-transform duration-300 hover:scale-[1.02] h-full">
                     <h4 class="text-xl font-semibold text-gray-900">Project Management Advisor - Tycho.Al</h4>
                     <p class="mt-2 text-gray-600">
                         Consulting on the commercialization strategy of autonomous UAV navigation technology for dual-use markets as part of the ESTEEM cohort.
                     </p>
                 </div>
                 <!-- Project 2: Mabe TyP -->
-                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg transition-transform duration-300 hover:scale-[1.02]">
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg transition-transform duration-300 hover:scale-[1.02] h-full">
                     <h4 class="text-xl font-semibold text-gray-900">NTI Intern - Mabe TyP</h4>
                     <p class="mt-2 text-gray-600">
                         Conducted user research and testing, improving usability by 50% in a vision-based fridge project. Presented technology projects to C-suite executives.
                     </p>
                 </div>
                 <!-- Project 3: Technology Innovation Program -->
-                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg transition-transform duration-300 hover:scale-[1.02]">
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg transition-transform duration-300 hover:scale-[1.02] h-full">
                     <h4 class="text-xl font-semibold text-gray-900">President, Technology Innovation Program</h4>
                     <p class="mt-2 text-gray-600">
                         Developed and implemented resource protocols, improving operational efficiency by 25%. Coordinated cross-team efforts for student-led entrepreneurship projects.
-                    </p>
-                </div>
-                <!-- Project 4: Engineering Division Assistant -->
-                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg transition-transform duration-300 hover:scale-[1.02]">
-                    <h4 class="text-xl font-semibold text-gray-900">Engineering Division Assistant</h4>
-                    <p class="mt-2 text-gray-600">
-                        Developed a sensor-integrated production line simulation to improve training efficiency. Facilitated Arduino workshops and technical conferences.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Interactive Demo Section -->
+    <section id="interactive-demo" class="py-16 sm:py-20">
+        <div class="container mx-auto px-6">
+            <h3 class="section-title text-3xl font-bold text-gray-900 mb-4">Interactive Project: Personal Connection Engine</h3>
+            <p class="text-lg text-gray-700 mb-8 max-w-4xl">
+                This is a live demonstration of the "Personal Connection Engine," a tool developed to enhance customer relations for the brand 'Irish Nostalgia'. By inputting a few order details, it leverages the Gemini API to generate a unique, brand-aligned thank-you message. This project showcases the practical application of generative AI in scaling personalized customer engagement. Feel free to interact with the tool below.
+            </p>
+            <div id="root">
+                <!-- The React application will be mounted here. -->
+            </div>
+        </div>
+    </section>
+
     <!-- Education & Certifications Section -->
-    <section id="education" class="py-16 sm:py-20">
+    <section id="education" class="bg-gray-100 py-16 sm:py-20">
         <div class="container mx-auto px-6">
             <h3 class="section-title text-3xl font-bold text-gray-900 mb-8">Education & Certifications</h3>
             <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg transition-transform duration-300 hover:scale-[1.01]">
@@ -118,79 +136,247 @@
                         <span class="text-indigo-600 text-2xl mr-4">&#x2022;</span>
                         <p class="text-gray-700"><strong>Academic Exchange (Management Engineering)</strong> - Università Degli Studi di Firenze</p>
                     </li>
-                    <li class="flex items-start">
-                        <span class="text-indigo-600 text-2xl mr-4">&#x2022;</span>
-                        <p class="text-gray-700"><strong>Positive Action Leadership (2024)</strong> - GE Vernova</p>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-indigo-600 text-2xl mr-4">&#x2022;</span>
-                        <p class="text-gray-700"><strong>Data Science and Artificial Intelligence - Basic Level (2025)</strong></p>
-                    </li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Skills & Interests Section -->
-    <section id="skills" class="bg-gray-100 py-16 sm:py-20">
-        <div class="container mx-auto px-6">
-            <h3 class="section-title text-3xl font-bold text-gray-900 mb-8">Skills & Interests</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-                <!-- Skills Card -->
-                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg transition-transform duration-300 hover:scale-[1.02]">
-                    <h4 class="text-xl font-semibold text-gray-900">Technical Skills</h4>
-                    <p class="mt-2 text-gray-600">MATLAB, SolidWorks, Altium Designer, Microsoft 365, Airtable, Notion</p>
-                    <h4 class="mt-4 text-xl font-semibold text-gray-900">Languages</h4>
-                    <p class="mt-2 text-gray-600">Spanish (Native), English (Fluent), Italian (Elementary)</p>
-                    <h4 class="mt-4 text-xl font-semibold text-gray-900">Soft Skills</h4>
-                    <p class="mt-2 text-gray-600">Leadership, Teamwork, Project Management, Problem-Solving</p>
-                </div>
-                <!-- Interests Card -->
-                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg transition-transform duration-300 hover:scale-[1.02]">
-                    <h4 class="text-xl font-semibold text-gray-900">Interests</h4>
-                    <ul class="mt-2 text-gray-600 space-y-2">
-                        <li>Trail running</li>
-                        <li>Innovation and ideation</li>
-                        <li>Cooking</li>
-                        <li>Technology trends</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Photo Gallery Section -->
-    <section id="gallery" class="py-16 sm:py-20">
-        <div class="container mx-auto px-6">
-            <h3 class="section-title text-3xl font-bold text-gray-900 mb-8">Photo Gallery</h3>
-            <p class="text-gray-700 text-lg mb-8">This section is ready for you to add your personal photos. Simply replace the placeholder images below!</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <!-- Placeholder Image 1 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-[1.05]">
-                    <img src="https://placehold.co/600x400/D1D5DB/1F2937?text=Your+Photo" alt="Gallery Photo 1" class="w-full h-auto">
-                </div>
-                <!-- Placeholder Image 2 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-[1.05]">
-                    <img src="https://placehold.co/600x400/9CA3AF/1F2937?text=Your+Photo" alt="Gallery Photo 2" class="w-full h-auto">
-                </div>
-                <!-- Placeholder Image 3 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-[1.05]">
-                    <img src="https://placehold.co/600x400/6B7280/1F2937?text=Your+Photo" alt="Gallery Photo 3" class="w-full h-auto">
-                </div>
-                <!-- Placeholder Image 4 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-[1.05]">
-                    <img src="https://placehold.co/600x400/4B5563/1F2937?text=Your+Photo" alt="Gallery Photo 4" class="w-full h-auto">
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8 mt-12">
+    <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-6 text-center">
             <p>&copy; 2025 Moisés Alejandro Carrera Alcacio. All rights reserved.</p>
         </div>
     </footer>
 
+    <script type="module">
+        import React, { useState, useCallback } from 'react';
+        import ReactDOM from 'react-dom/client';
+        import { GoogleGenAI } from "@google/genai";
+
+        // --- TYPES ---
+        const CustomerType = {
+          B2C: "B2C-Individual",
+          B2B_DEPT: "B2B-University Dept",
+          B2B_OTHER: "B2B-Other",
+        };
+
+        const IsGift = {
+          YES: "Yes",
+          NO: "No",
+        };
+
+        // --- GEMINI SERVICE ---
+        const generateThankYouMessage = async (details, apiKey) => {
+          if (!apiKey) {
+            return "Error: API_KEY is not set. Please set it in the script.";
+          }
+          const ai = new GoogleGenAI({ apiKey });
+
+          const customerTypeForPrompt = details.customerType === CustomerType.B2C ? 'B2C' : 'B2B';
+          const prompt = `
+            Act as the brand voice for 'Irish Nostalgia,' a student-led Notre Dame company. Our tone is grateful, warm, personal, and proud of our university and our mission.
+            Your task is to write a short, 2-3 sentence personalized thank-you message for a customer.
+            ---
+            **Brand Rules:**
+            1. ALWAYS be grateful and personal. Use the customer's name.
+            2. ALWAYS sign off with "Go Irish!" or a similar ND-centric closing.
+            3. If 'OMVA_Product' is 'Yes', ALWAYS thank them for "directly supporting campus veterans through our partnership with the Office of Military & Veteran Affairs."
+            4. If 'Is_Gift' is 'Yes', mention "sharing the ND spirit" or how special it is to give a gift.
+            5. If 'Customer_Type' is 'B2B', thank them for "partnering with our student-run business."
+            6. If 'Customer_Type' is 'B2C', thank them for "supporting our student-run business."
+            ---
+            Now, generate a message using these specific order details:
+            **Customer Name:** ${details.customerName}
+            **Product(s) Purchased:** ${details.products}
+            **Is_Gift:** ${details.isGift}
+            **Customer_Type:** ${customerTypeForPrompt}
+            **OMVA_Product:** ${details.isOMVA ? 'Yes' : 'No'}
+            Generate the message now
+          `;
+
+          try {
+            const response = await ai.models.generateContent({
+              model: 'gemini-2.5-flash',
+              contents: prompt,
+            });
+            const text = response.text;
+            if (!text) {
+              throw new Error("Received an empty response from the AI.");
+            }
+            return text.trim();
+          } catch (error) {
+            console.error("Error generating message:", error);
+            if (error instanceof Error) {
+                return `Error: Could not generate message. ${error.message}`;
+            }
+            return "An unknown error occurred while generating the message.";
+          }
+        };
+
+        // --- ICONS ---
+        const ClipboardIcon = (props) => (
+          React.createElement('svg', { ...props, xmlns: "http://www.w3.org/2000/svg", width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" },
+            React.createElement('path', { d: "M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" }),
+            React.createElement('rect', { x: "8", y: "2", width: "8", height: "4", rx: "1", ry: "1" })
+          )
+        );
+
+        const RefreshIcon = (props) => (
+          React.createElement('svg', { ...props, xmlns: "http://www.w3.org/2000/svg", width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" },
+            React.createElement('path', { d: "M23 4v6h-6" }),
+            React.createElement('path', { d: "M1 20v-6h6" }),
+            React.createElement('path', { d: "M3.51 9a9 9 0 0 1 14.85-3.36L20.5 10" }),
+            React.createElement('path', { d: "M20.49 15a9 9 0 0 1-14.85 3.36L3.5 14" })
+          )
+        );
+
+        // --- COMPONENTS ---
+        const OrderForm = ({ orderDetails, setOrderDetails, onSubmit, isLoading }) => {
+          const handleChange = (e) => {
+            const { name, value, type, checked } = e.target;
+            setOrderDetails(prev => ({
+              ...prev,
+              [name]: type === 'checkbox' ? checked : value
+            }));
+          };
+
+          return React.createElement('div', { className: "bg-white p-6 md:p-8 rounded-lg shadow-lg border border-gray-200" },
+            React.createElement('h2', { className: "text-2xl font-bold text-gray-900 mb-6" }, "Order Details"),
+            React.createElement('form', { onSubmit, className: "space-y-6" },
+              React.createElement('div', null,
+                React.createElement('label', { htmlFor: "customerName", className: "block text-sm font-medium text-gray-700" }, "Customer Name"),
+                React.createElement('input', { type: "text", id: "customerName", name: "customerName", value: orderDetails.customerName, onChange: handleChange, className: "mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-gray-800 focus:border-gray-800", required: true })
+              ),
+              React.createElement('div', null,
+                React.createElement('label', { htmlFor: "products", className: "block text-sm font-medium text-gray-700" }, "Product(s) Purchased"),
+                React.createElement('input', { type: "text", id: "products", name: "products", value: orderDetails.products, onChange: handleChange, className: "mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-gray-800 focus:border-gray-800", required: true })
+              ),
+              React.createElement('div', { className: "grid grid-cols-1 sm:grid-cols-2 gap-6" },
+                React.createElement('div', null,
+                  React.createElement('label', { htmlFor: "isGift", className: "block text-sm font-medium text-gray-700" }, "Is this a gift?"),
+                  React.createElement('select', { id: "isGift", name: "isGift", value: orderDetails.isGift, onChange: handleChange, className: "mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-gray-800 focus:border-gray-800" },
+                    Object.values(IsGift).map(val => React.createElement('option', { key: val, value: val }, val))
+                  )
+                ),
+                React.createElement('div', null,
+                  React.createElement('label', { htmlFor: "customerType", className: "block text-sm font-medium text-gray-700" }, "Customer Type"),
+                  React.createElement('select', { id: "customerType", name: "customerType", value: orderDetails.customerType, onChange: handleChange, className: "mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-gray-800 focus:border-gray-800" },
+                    Object.values(CustomerType).map(val => React.createElement('option', { key: val, value: val }, val))
+                  )
+                )
+              ),
+              React.createElement('div', { className: "flex items-center" },
+                React.createElement('input', { type: "checkbox", id: "isOMVA", name: "isOMVA", checked: orderDetails.isOMVA, onChange: handleChange, className: "h-4 w-4 text-black border-gray-300 rounded focus:ring-gray-700" }),
+                React.createElement('label', { htmlFor: "isOMVA", className: "ml-2 block text-sm text-gray-900" }, "Includes OMVA Partnership Product?")
+              ),
+              React.createElement('button', { type: "submit", disabled: isLoading, className: "w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors" },
+                isLoading && React.createElement('svg', { className: "animate-spin -ml-1 mr-3 h-5 w-5 text-white", xmlns: "http://www.w3.org/2000/svg", fill: "none", viewBox: "0 0 24 24" },
+                  React.createElement('circle', { className: "opacity-25", cx: "12", cy: "12", r: "10", stroke: "currentColor", strokeWidth: "4" }),
+                  React.createElement('path', { className: "opacity-75", fill: "currentColor", d: "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" })
+                ),
+                isLoading ? 'Generating...' : 'Generate Message'
+              )
+            )
+          );
+        };
+
+        const MessageDisplay = ({ message, onRegenerate, isLoading }) => {
+          const [copied, setCopied] = useState(false);
+          const handleCopy = () => {
+            if (message) {
+              navigator.clipboard.writeText(message);
+              setCopied(true);
+              setTimeout(() => setCopied(false), 2000);
+            }
+          };
+          const hasMessage = message.trim().length > 0;
+
+          return React.createElement('div', { className: "bg-white p-6 md:p-8 rounded-lg shadow-lg border border-gray-200" },
+            React.createElement('div', { className: "flex justify-between items-center mb-4" },
+              React.createElement('h2', { className: "text-2xl font-bold text-gray-900" }, "Generated Message"),
+              hasMessage && React.createElement('div', { className: "flex space-x-2" },
+                React.createElement('button', { onClick: handleCopy, disabled: isLoading, className: "p-2 text-gray-600 hover:text-black hover:bg-gray-100 rounded-full transition-colors disabled:text-gray-300", title: "Copy Message" },
+                  React.createElement(ClipboardIcon, { className: "h-5 w-5" })
+                ),
+                React.createElement('button', { onClick: onRegenerate, disabled: isLoading, className: "p-2 text-gray-600 hover:text-black hover:bg-gray-100 rounded-full transition-colors disabled:text-gray-300", title: "Regenerate" },
+                  React.createElement(RefreshIcon, { className: `h-5 w-5 ${isLoading ? 'animate-spin' : ''}` })
+                )
+              )
+            ),
+            copied && React.createElement('div', { className: "mb-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg", role: "alert" },
+              React.createElement('span', { className: "block sm:inline" }, "Message copied to clipboard!")
+            ),
+            React.createElement('div', { className: "relative" },
+              React.createElement('textarea', { readOnly: true, value: message, placeholder: "Your personalized message will appear here...", className: "w-full h-48 p-4 bg-gray-50 border border-gray-200 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-gray-800" })
+            )
+          );
+        };
+
+        const App = () => {
+          // IMPORTANT: Replace with your actual API key
+          const API_KEY = ""; 
+          
+          const [orderDetails, setOrderDetails] = useState({
+            customerName: '',
+            products: '',
+            isGift: IsGift.NO,
+            customerType: CustomerType.B2C,
+            isOMVA: false,
+          });
+          const [generatedMessage, setGeneratedMessage] = useState('');
+          const [isLoading, setIsLoading] = useState(false);
+          const [error, setError] = useState(null);
+
+          const handleGenerateMessage = useCallback(async () => {
+            if (!API_KEY) {
+              setError("API Key not provided. Please add it to the script in index.html.");
+              return;
+            }
+            if (!orderDetails.customerName || !orderDetails.products) {
+              setError("Please fill in all required fields.");
+              return;
+            }
+            setIsLoading(true);
+            setError(null);
+            const result = await generateThankYouMessage(orderDetails, API_KEY);
+            if (result.startsWith('Error:')) {
+              setError(result);
+              setGeneratedMessage('');
+            } else {
+              setGeneratedMessage(result);
+            }
+            setIsLoading(false);
+          }, [orderDetails, API_KEY]);
+
+          const handleSubmit = (e) => {
+            e.preventDefault();
+            handleGenerateMessage();
+          };
+
+          return React.createElement('div', { className: "font-sans text-gray-800" },
+            React.createElement('main', { className: "w-full" },
+              React.createElement('div', { className: "grid grid-cols-1 lg:grid-cols-2 gap-8 items-start" },
+                React.createElement(OrderForm, { orderDetails, setOrderDetails, onSubmit: handleSubmit, isLoading }),
+                React.createElement('div', { className: "flex flex-col gap-4" },
+                  error && React.createElement('div', { className: "bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg", role: "alert" },
+                    React.createElement('strong', { className: "font-bold" }, "Error: "),
+                    React.createElement('span', { className: "block sm:inline" }, error)
+                  ),
+                  React.createElement(MessageDisplay, { message: generatedMessage, onRegenerate: handleGenerateMessage, isLoading })
+                )
+              )
+            )
+          );
+        };
+        
+        // --- RENDER APP ---
+        const rootElement = document.getElementById('root');
+        if (!rootElement) {
+          throw new Error("Could not find root element to mount to");
+        }
+        const root = ReactDOM.createRoot(rootElement);
+        root.render(React.createElement(React.StrictMode, null, React.createElement(App)));
+    </script>
 </body>
 </html>
+
